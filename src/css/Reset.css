@@ -1,0 +1,41 @@
+:root {
+  scroll-behavior: smooth;
+  --step--2: clamp(0.91rem, calc(0.9rem + 0.05vw), 0.96rem);
+  --step--1: clamp(1.09rem, calc(1.07rem + 0.11vw), 1.2rem);
+  --step-0: clamp(1.31rem, calc(1.28rem + 0.19vw), 1.5rem);
+  --step-1: clamp(1.58rem, calc(1.52rem + 0.3vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.8rem + 0.45vw), 2.34rem);
+  --step-3: clamp(2.27rem, calc(2.14rem + 0.66vw), 2.93rem);
+  --step-4: clamp(2.72rem, calc(2.53rem + 0.94vw), 3.66rem);
+  --step-5: clamp(3.27rem, calc(3rem + 1.31vw), 4.58rem);
+  --step-6: clamp(3.92rem, calc(3.56rem + 1.8vw), 5.72rem);
+  --step-7: clamp(4.7rem, calc(4.21rem + 2.44vw), 7.15rem);
+  --step-8: clamp(5.64rem, calc(4.99rem + 3.29vw), 8.94rem);
+  --step-9: clamp(6.77rem, calc(5.89rem + 4.39vw), 11.18rem);
+  --step-10: clamp(8.13rem, calc(6.96rem + 5.83vw), 13.97rem);
+}
+html {
+  overflow-x: hidden;
+}
+body{
+  min-height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-family: 'Itim', cursive;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
