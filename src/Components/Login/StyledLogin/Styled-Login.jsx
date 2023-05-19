@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const MainLogin = styled.main`
   min-height: 100vh;
@@ -8,6 +9,11 @@ export const MainLogin = styled.main`
   overflow: hidden;
   align-items: center;
   justify-content: center;
+  padding: 0 0rem 0 1rem;
+  ${media.lessThan("64rem")`       
+    padding: 1rem 1rem 1rem 1rem;
+    flex-wrap: wrap;
+  `};
 `;
 export const ConteinerLogin = styled.div`
   flex: 0 1 44rem;
@@ -26,6 +32,10 @@ export const ConteinerImgPhone = styled.div`
     height: 100%;
     width: 100%;
   }
+  ${media.lessThan("64rem")`       
+    min-height: 60rem;
+    order: -1;
+  `};
 `;
 export const BurbleLeft = styled.div`
   position: absolute;

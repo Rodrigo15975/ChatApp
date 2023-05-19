@@ -17,6 +17,9 @@ export const ConteinerInputLogin = styled.div`
     height: 2.3rem;
     border: 0.1rem solid #6557ff;
     border-radius: 0.4rem;
+    outline: none;
+    padding-left: 0.4rem;
+    font-size: var(--step--1);
   }
   div {
     flex: 0 1 22rem;

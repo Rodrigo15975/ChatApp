@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ButtonGoogle = () => {
   return (
-    <>
-      <div>
-        
-      </div>
-    </>
-  )
-}
+    <div>
+      <button  className="btnGoogle">Google</button>
+    </div>
+  );
+};
 
-export default ButtonGoogle
+export default ButtonGoogle;

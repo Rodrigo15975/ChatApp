@@ -17,12 +17,11 @@ export const ConteinerFormLogin = styled.div`
   flex-wrap: wrap;
   min-height: 20rem ;
   justify-content: center;
-
   h2{
     margin: 1rem 0 1rem 0;
     color: #7848FF;
     font-size: var(--step-1);
-    display: flex;
+    display: flex;   
     align-items: center;
   }
 `;
@@ -32,6 +31,7 @@ export const ConteinerButtonsLogin = styled.div`
   display: flex;
   align-items: end;
   flex-wrap: wrap;
+  justify-content: center;
   button{
     height: 3rem;
     width: 100%;
@@ -39,7 +39,6 @@ export const ConteinerButtonsLogin = styled.div`
     color: #fff;
     font-size: var(--step-0);
   }
-
   .registerAndForget{
     display: flex;
     width: 100%;

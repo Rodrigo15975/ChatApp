@@ -5,14 +5,12 @@ import InputLogin from "./InputLogin/InputLogin";
 import ButtonLogin from "./ButtonLogin/ButtonLogin";
 import { ContInputsForm } from "./StyledFormLogin";
 import { ConteinerButtonsLogin } from "../StyledPanel/StyledPanel";
+const initialValues = { email: "", password: "" };
 
 const FormLogin = () => {
-  const initialValues = { email: "", password: "" };
-
   const getDatosLogin = (datos) => {
     console.log(datos);
   };
-
   return (
     <>
       <h2>Login</h2>
@@ -45,9 +43,9 @@ const FormLogin = () => {
             {/* El Componente LoginButton, devuelve los datos a la funcionn getDatosLogin */}
             <ConteinerButtonsLogin>
               <ButtonLogin handleSubmit={handleSubmit} />
-              <div className="registerAndForget" >
-                <p className="forget" >Forget Password</p>
-                <p className="register" >Registrarme</p>
+              <div className="registerAndForget">
+                <p className="forget">Forget Password</p>
+                <p className="register">Registrarme</p>
               </div>
             </ConteinerButtonsLogin>
           </>

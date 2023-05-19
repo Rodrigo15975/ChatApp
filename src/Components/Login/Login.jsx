@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BurbleBottomLeft,
   BurbleBottomRight,
@@ -10,7 +10,28 @@ import {
 } from "./StyledLogin/Styled-Login";
 import bg from "./img/image 99.webp";
 import PanelLogin from "./PanelLogin/PanelLogin";
+import { motion } from "framer-motion";
+const floatingVariants = {
+  initial: {
+    y: -20,
+  },
+  animate: {
+    y: [0, -10, 0],
+    transition: {
+      y: {
+        repeat: Infinity,
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
+  },
+};
 const Login = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 1000);
+  }, []);
   return (
     <>
       <MainLogin>
@@ -19,10 +40,16 @@ const Login = () => {
         <BurbleBottomLeft />
         <BurbleBottomRight />
         <ConteinerLogin>
-          <PanelLogin/>
+          <PanelLogin />
         </ConteinerLogin>
         <ConteinerImgPhone>
-          <img src={bg} alt="Phone" />
+          <motion.div
+            variants={floatingVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <img src={bg} alt="Phone" />
+          </motion.div>
         </ConteinerImgPhone>
       </MainLogin>
     </>

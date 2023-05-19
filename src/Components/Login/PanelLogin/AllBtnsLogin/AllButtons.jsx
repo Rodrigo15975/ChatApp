@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import { MainContButtons } from "./StyledAllButtons";
+import ButtonGoogle from "./ButtonGoogle/ButtonGoogle";
+import ButtonTwitter from "./ButtonTwitter/ButtonTwitter";
+import ButtonFacebook from "./ButtonFacebook/ButtonFacebook";
 
 const AllButtons = () => {
   return (
     <>
-      {/* <h2>HOla BUTTONS</h2> */}
+      <MainContButtons>
+        <div>
+          <ButtonGoogle   />
+          <ButtonFacebook   />
+          <ButtonTwitter   />
+        </div>
+      </MainContButtons>
     </>
-  )
-}
+  );
+};
 
-export default AllButtons
+export default AllButtons;
