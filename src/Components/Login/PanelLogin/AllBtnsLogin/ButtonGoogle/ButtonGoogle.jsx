@@ -3,7 +3,7 @@ import React from "react";
 const ButtonGoogle = () => {
   return (
     <div>
-      <button  className="btnGoogle">Google</button>
+      <button type="button"  className="btnGoogle">Google</button>
     </div>
   );
 };

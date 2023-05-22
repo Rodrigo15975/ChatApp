@@ -33,7 +33,7 @@ export const ConteinerImgPhone = styled.div`
     width: 100%;
   }
   ${media.lessThan("64rem")`       
-    min-height: 60rem;
+    min-height: 50rem;
     order: -1;
   `};
 `;

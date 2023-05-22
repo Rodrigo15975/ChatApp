@@ -3,7 +3,7 @@ import React from "react";
 const ButtonTwitter = () => {
   return (
     <div>
-      <button className="btnTwitter" >Twitter</button>
+      <button type="button"  className="btnTwitter" >Twitter</button>
     </div>
   );
 };

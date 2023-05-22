@@ -20,9 +20,9 @@ export const ContTitleHeader = styled.div`
       width: 5rem;
       left: -5rem;
       ${media.lessThan("30.625rem")`       
-        top: -2.5rem;
+        top: -3.5rem;
         width: 3rem;
-        left: -2.5rem;
+        left: -.5rem;
     `};
     }
   }

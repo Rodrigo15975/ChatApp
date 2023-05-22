@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import { LoginValidationSchena } from "./ValidationLogin/Validation";
 import InputLogin from "./InputLogin/InputLogin";
 import ButtonLogin from "./ButtonLogin/ButtonLogin";
 import { ContInputsForm } from "./StyledFormLogin";
 import { ConteinerButtonsLogin } from "../StyledPanel/StyledPanel";
-const initialValues = { email: "", password: "" };
+import InputPhone from "./InputLogin/InputPhone";
+const initialValues = { email: "", password: "", phone: "" };
 
 const FormLogin = () => {
+  const [loginPhone, setLoginPhone] = useState(false);
+
   const getDatosLogin = (datos) => {
     console.log(datos);
   };
+
   return (
     <>
       <h2>Login</h2>
@@ -27,7 +31,7 @@ const FormLogin = () => {
                 fieldProps={getFieldProps}
                 touched={touched}
                 errors={errors}
-                label="Email or Phone "
+                label="Email or phone"
                 type="email"
                 name="email"
               />

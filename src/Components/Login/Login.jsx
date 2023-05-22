@@ -34,6 +34,7 @@ const Login = () => {
   }, []);
   return (
     <>
+    
       <MainLogin>
         <BurbleLeft />
         <BurbleRight />
