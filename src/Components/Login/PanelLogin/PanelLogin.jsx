@@ -8,7 +8,6 @@ import {
 import HeaderLogin from "./HeaderLogin/HeaderLogin";
 import FormLogin from "./FormLogin/FormLogin";
 import AllButtons from "./AllBtnsLogin/AllButtons";
-
 const PanelLogin = () => {
   return (
     <>

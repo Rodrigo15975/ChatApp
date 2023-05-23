@@ -1,11 +1,9 @@
 import styled from "styled-components";
-
 export const ConteinerInputLogin = styled.div`
   flex: 0 1 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   label {
     flex: 0 1 22rem;
     color: #ff4e8d;

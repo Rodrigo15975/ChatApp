@@ -1,21 +1,17 @@
-import React, {  useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Login } from "../Components/ExportComponentes";
-import { AuthGlobal } from "../Context/ContextAuth";
-import Principal from "../Screen/Principal/Principal";
+import { Forget, Register, Principal } from "../Screen/exportScreen";
 const Routexs = () => {
-  const { user } = useContext(AuthGlobal);
-
   const userTrue = () => {
-    if (user) {
-      return !!user;
-    }
+    const tokenFacebook = sessionStorage.getItem("tokenFacebook");
+    const tokenGoogle = sessionStorage.getItem("tokenGoogle");
+    if (tokenFacebook) return true;
+    if (tokenGoogle) return true;
   };
-
   useEffect(() => {
     userTrue();
   }, []);
-
   return (
     <>
       <BrowserRouter>
@@ -25,6 +21,8 @@ const Routexs = () => {
             path="/principal"
             element={userTrue() ? <Principal /> : <Navigate to={"/"} />}
           />
+          <Route path="/forgerpass" element={<Forget />} />´
+          <Route path="register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </>

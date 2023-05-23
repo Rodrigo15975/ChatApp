@@ -26,9 +26,7 @@ export const ContTitleHeader = styled.div`
     `};
     }
   }
-`;
-
-export const ContTextHeader = styled.div`
+`;export const ContTextHeader = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;

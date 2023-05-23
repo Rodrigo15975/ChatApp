@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
-import {
-  BurbleBottomLeft,
-  BurbleBottomRight,
-  BurbleLeft,
-  BurbleRight,
-  ConteinerImgPhone,
-  ConteinerLogin,
-  MainLogin,
-} from "./StyledLogin/Styled-Login";
+import { BurbleBottomLeft,  BurbleBottomRight,  BurbleLeft,  BurbleRight,  ConteinerImgPhone,  ConteinerLogin,  MainLogin,} from "./StyledLogin/Styled-Login";
 import bg from "./img/image 99.webp";
 import PanelLogin from "./PanelLogin/PanelLogin";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 const floatingVariants = {
   initial: {
     y: -20,
@@ -33,8 +25,7 @@ const Login = () => {
     }, 1000);
   }, []);
   return (
-    <>
-    
+    <>    
       <MainLogin>
         <BurbleLeft />
         <BurbleRight />
@@ -44,13 +35,13 @@ const Login = () => {
           <PanelLogin />
         </ConteinerLogin>
         <ConteinerImgPhone>
-          <motion.div
+          <m.div
             variants={floatingVariants}
             initial="initial"
             animate="animate"
           >
             <img src={bg} alt="Phone" />
-          </motion.div>
+          </m.div>
         </ConteinerImgPhone>
       </MainLogin>
     </>

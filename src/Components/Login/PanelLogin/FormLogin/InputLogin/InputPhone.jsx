@@ -9,7 +9,6 @@ const InputPhone = ({ fieldProps, touched, errors, label, type, name }) => {
     else if (touched[name] && !errors[name]) return "form-field value";
     else return "form-field";
   };
-
   return (
     <>
       <ConteinerInputLogin className={getFieldClass(touched, errors, name)}>

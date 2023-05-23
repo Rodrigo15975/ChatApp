@@ -5,12 +5,9 @@ import InputLogin from "./InputLogin/InputLogin";
 import ButtonLogin from "./ButtonLogin/ButtonLogin";
 import { ContInputsForm } from "./StyledFormLogin";
 import { ConteinerButtonsLogin } from "../StyledPanel/StyledPanel";
-import InputPhone from "./InputLogin/InputPhone";
+import { Link } from "react-router-dom";
 const initialValues = { email: "", password: "", phone: "" };
-
 const FormLogin = () => {
-  const [loginPhone, setLoginPhone] = useState(false);
-
   const getDatosLogin = (datos) => {
     console.log(datos);
   };
@@ -48,8 +45,8 @@ const FormLogin = () => {
             <ConteinerButtonsLogin>
               <ButtonLogin handleSubmit={handleSubmit} />
               <div className="registerAndForget">
-                <p className="forget">Forget Password</p>
-                <p className="register">Registrarme</p>
+                <Link to={"/forgerpass"}  className="forget">Forget Password</Link>
+                <Link to={"/register"} className="register">Registrarme</Link>
               </div>
             </ConteinerButtonsLogin>
           </>

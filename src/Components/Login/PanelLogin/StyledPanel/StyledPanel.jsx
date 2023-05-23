@@ -4,8 +4,6 @@ export const ContPanelLogin = styled.div`
   width: 100%;
   min-height: 50rem;
 `;
-
-
 export const ConteinerHeaderLogin = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +23,6 @@ export const ConteinerFormLogin = styled.div`
     align-items: center;
   }
 `;
-
 export const ConteinerButtonsLogin = styled.div`
   flex: 0 1 22rem; 
   display: flex;
@@ -46,10 +43,12 @@ export const ConteinerButtonsLogin = styled.div`
     .forget{
       color: #FF4E8D;
       text-decoration: underline;
+      cursor:pointer;
     }
     .register{
       color: #408CFF;
       text-decoration: underline;
+      cursor:pointer;
     }
   }
 `;

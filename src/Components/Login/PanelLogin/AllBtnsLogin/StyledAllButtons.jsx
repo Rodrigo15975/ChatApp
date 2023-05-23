@@ -1,13 +1,10 @@
 import styled from "styled-components";
-
 export const MainContButtons = styled.div`
   flex: 0 1 22rem;
   min-height: 14rem;
-  display: flex;
-  
-  align-items: end;
-  flex-wrap: wrap;
-    
+  display: flex;  
+  align-items: center;
+  flex-wrap: wrap;    
   div {
     flex: 0 1 100%;
     display: flex;

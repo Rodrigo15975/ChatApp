@@ -1,7 +1,6 @@
 import React from "react";
 import { MainContButtons } from "./StyledAllButtons";
 import ButtonGoogle from "./ButtonGoogle/ButtonGoogle";
-import ButtonTwitter from "./ButtonTwitter/ButtonTwitter";
 import ButtonFacebook from "./ButtonFacebook/ButtonFacebook";
 
 const AllButtons = () => {
@@ -9,9 +8,8 @@ const AllButtons = () => {
     <>
       <MainContButtons>
         <div>
-          <ButtonGoogle   />
-          <ButtonFacebook   />
-          <ButtonTwitter   />
+          <ButtonGoogle />
+          <ButtonFacebook />
         </div>
       </MainContButtons>
     </>
