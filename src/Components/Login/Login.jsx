@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { BurbleBottomLeft,  BurbleBottomRight,  BurbleLeft,  BurbleRight,  ConteinerImgPhone,  ConteinerLogin,  MainLogin,} from "./StyledLogin/Styled-Login";
+import {  BurbleBottomLeft,  BurbleBottomRight,  BurbleLeft,  BurbleRight,  ConteinerImgPhone,  ConteinerLogin,  MainLogin,} from "./StyledLogin/Styled-Login";
 import bg from "./img/image 99.webp";
 import PanelLogin from "./PanelLogin/PanelLogin";
 import { m } from "framer-motion";
+
 const floatingVariants = {
   initial: {
     y: -20,
@@ -19,13 +20,8 @@ const floatingVariants = {
   },
 };
 const Login = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 1000);
-  }, []);
   return (
-    <>    
+    <>
       <MainLogin>
         <BurbleLeft />
         <BurbleRight />

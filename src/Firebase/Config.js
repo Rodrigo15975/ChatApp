@@ -1,9 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {
-  FacebookAuthProvider,
-  GoogleAuthProvider,
-  getAuth,
-} from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider,  getAuth,} from "firebase/auth";
 const databaseURL = import.meta.env.VITE_REACT_APP_API_DATABASE;
 const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
 const projectId = import.meta.env.VITE_REACT_APP_API_PROJECT;

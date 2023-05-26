@@ -11,7 +11,6 @@ const FormLogin = () => {
   const getDatosLogin = (datos) => {
     console.log(datos);
   };
-
   return (
     <>
       <h2>Login</h2>

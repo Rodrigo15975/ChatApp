@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Login } from "../Components/ExportComponentes";
 import { Forget, Register, Principal } from "../Screen/exportScreen";
+import { AuthGlobal } from "../Context/ContextAuth";
 const Routexs = () => {
+  const { user, tokenUser } = useContext(AuthGlobal);
   const userTrue = () => {
-    const tokenFacebook = sessionStorage.getItem("tokenFacebook");
     const tokenGoogle = sessionStorage.getItem("tokenGoogle");
-    if (tokenFacebook) return true;
-    if (tokenGoogle) return true;
+    const tokenFacebook = sessionStorage.getItem("tokenFacebook");    
+    if (tokenGoogle)return !!tokenGoogle;    
+    if (tokenFacebook)return !!tokenFacebook;    
   };
   useEffect(() => {
     userTrue();
   }, []);
+
   return (
     <>
       <BrowserRouter>
@@ -23,6 +26,7 @@ const Routexs = () => {
           />
           <Route path="/forgerpass" element={<Forget />} />´
           <Route path="register" element={<Register />} />
+          <Route path="*" element={<h1>No enocontrado</h1>} />
         </Routes>
       </BrowserRouter>
     </>

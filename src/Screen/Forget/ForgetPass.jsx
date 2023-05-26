@@ -1,11 +1,12 @@
-import React from 'react'
-
+import React from "react";
 const ForgetPass = () => {
   return (
     <>
-      <h2>Forger</h2>
-    </>
-  )
-}
+     <div  className="bg">
 
-export default ForgetPass
+     </div>
+    </>
+  );
+};
+
+export default ForgetPass;

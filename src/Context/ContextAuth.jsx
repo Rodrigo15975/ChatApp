@@ -1,18 +1,18 @@
 import React, { useState, createContext } from "react";
 export const AuthGlobal = createContext();
 const ContextAuth = ({ children }) => {
-  const [googleToken, setGoogleToken] = useState(null);
-  const [facebookToken, setFacebooktoken] = useState(null);
-  const [twitterToken, setTwittertoken] = useState(null);
+  const [tokenUser, setTokenUser] = useState(null);
   const [user, setUser] = useState(null);
+  const [photoUser, setPhotoUser] = useState(null);
   return (
     <AuthGlobal.Provider
       value={{
-        setGoogleToken,
-        setFacebooktoken,
-        setTwittertoken,
+        setTokenUser,
+        tokenUser,
         setUser,
         user,
+        setPhotoUser,
+        photoUser
       }}
     >
       {children}

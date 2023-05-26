@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  ContPanelLogin,
-  ConteinerButtonsLogin,
-  ConteinerFormLogin,
-  ConteinerHeaderLogin,
-} from "./StyledPanel/StyledPanel";
+import {  ContPanelLogin,  ConteinerButtonsLogin,  ConteinerFormLogin,  ConteinerHeaderLogin,} from "./StyledPanel/StyledPanel";
 import HeaderLogin from "./HeaderLogin/HeaderLogin";
 import FormLogin from "./FormLogin/FormLogin";
 import AllButtons from "./AllBtnsLogin/AllButtons";

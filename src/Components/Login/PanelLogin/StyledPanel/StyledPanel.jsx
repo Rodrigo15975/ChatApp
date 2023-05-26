@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const ContPanelLogin = styled.div`  
   width: 100%;
   min-height: 50rem;
+  ${media.lessThan("64rem")`       
+   min-height: 100%;
+  `};
 `;
 export const ConteinerHeaderLogin = styled.div`
   display: flex;

@@ -2,7 +2,6 @@ import React from "react";
 import { Field } from "formik";
 import ErrosInputs from "./ErrosInputs";
 import { ConteinerInputLogin } from "./StyledInputLogin";
-
 const InputLogin = ({ fieldProps, touched, errors, label, type, name }) => {
   const getFieldClass = (touched, errors, name) => {
     if (touched[name] && errors[name]) return "form-field error";
