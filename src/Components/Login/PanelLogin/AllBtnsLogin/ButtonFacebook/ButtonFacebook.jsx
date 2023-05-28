@@ -1,22 +1,16 @@
-import React, { useContext } from "react";
-import { AuthGlobal } from "../../../../../Context/ContextAuth";
+import React from "react";
 import { auth, facebook } from "../../../../../Firebase/Config";
-import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { signInWithPopup} from "firebase/auth";
 const ButtonFacebook = () => {
-  const { setTokenUser, setUser, setPhotoUser } = useContext(AuthGlobal);
-  const navigate = useNavigate();
   const loginFacebook = async () => {
     try {
       const provider = await signInWithPopup(auth, facebook);
       const user = provider.user;
-      const { accessToken, photoURL } = user;
+      const { accessToken, photoURL, displayName } = user;
       const partialToken = `${accessToken.substring( 0, 5 )}...${accessToken.substring(accessToken.length - 5)}`;
-      sessionStorage.setItem("tokenFacebook", partialToken);
-      setTokenUser(partialToken);
-      setPhotoUser(photoURL);
-      onAuthStateChanged(auth, (user) =>  user ? (setUser(user.displayName), navigate("/principal")) : setUser(null));
-      return;
+      localStorage.setItem("tokenFacebook", partialToken);
+      localStorage.setItem("photoFacebook", photoURL );
+      localStorage.setItem("userNameFacebook", displayName);
     } catch (error) {
       console.log(error);
     }
